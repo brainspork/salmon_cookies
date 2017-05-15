@@ -67,14 +67,14 @@ function calculate(store){
   var storeName = document.createElement('h3');
   var listArr = store.cookieArr;
   var startHour = parseInt(store.openHour);
-  var cookiesTotal;
+  var cookiesTotal = 0;
   var cookiesPerHour = function(){
     return Math.floor((Math.ceil(Math.random() * (parseInt(store.maxCustomers) - parseInt(store.minCustomers))) + parseInt(store.minCustomers))*parseInt(store.aveCookie));
   }
   for(var i = 0; i < store.closeHour - store.openHour; i++){
     var hour = startHour + parseInt([i]);
     var sales = cookiesPerHour();
-    listArr.push('<li>' + hour + ':00 : ' + sales+ '</li>');
+    listArr.push('<li>' + hour + ':00 : ' +sales+ '</li>');
     cookiesTotal += sales;
   }
 
@@ -83,6 +83,11 @@ function calculate(store){
   var cookieList = store.cookieArr.join('');
   list.innerHTML = cookieList;
   document.body.appendChild(list);
+  document.write('<p>Total: '+cookiesTotal+'</p>');
 }
 
 calculate(firstPike);
+calculate(seaTac);
+calculate(seaCenter);
+calculate(capHill);
+calculate(alki);
