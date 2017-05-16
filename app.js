@@ -16,7 +16,7 @@ var seaTac = new Retailer('SeaTac Airport', 3, 24, 6, 20, 1.2);
 var seaCenter = new Retailer('Seattle Center', 11, 38, 6, 20, 3.7);
 var capHill = new Retailer('Capitol Hill', 20, 38, 6, 20, 2.3);
 var alki = new Retailer('Alik', 2, 16, 6, 20, 4.6);
-
+var locations = [firstPike, seaTac, seaCenter, capHill, alki];
 
 function calculate(store){
   var tableArr = store.cookieArr;
@@ -48,8 +48,8 @@ function calculate(store){
   var timeSales = document.getElementById('time');
   var timeData = ['<td></td>',];
   for(var k = 0; k < timeArr.length + 1; k++){
-    if ([k]<timeArr.length){
-      timeData.push('<td>' + timeArr[k]+ '</td>');
+    if ([k] < timeArr.length){
+      timeData.push('<td>' + timeArr[k] + '</td>');
     }else{
       timeData.push('<td>Location Totals</td>');
     }
@@ -64,9 +64,17 @@ function calculate(store){
   console.log(timeSales);
 }
 
+var locationsHourly = [];
+for(var p = 0; p < locations.length; p++){
+  calculate(locations[p]);
+  locationsHourly.push(locations[p].cookieArr);
+}
 
-calculate(firstPike);
-calculate(seaTac);
-calculate(seaCenter);
-calculate(capHill);
-calculate(alki);
+var hourlyTotals = [];
+for(var n = 0; n < 14; n++){
+  var counter = 0;
+  for(var m = 0; m < locationsHourly.length; m++){
+    counter += locationsHourly[m][n];
+  }
+  hourlyTotals.push(counter);
+}
