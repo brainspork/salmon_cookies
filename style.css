@@ -37,7 +37,7 @@ header h2{
   position:relative;
   background:none;
   top:300px;
-  font:40px 'Seaweed Script', sans-serif;
+  font:40px 'Seaweed Script', serif;
 }
 
 header div img{
@@ -82,7 +82,7 @@ main{
 }
 
 .buissness-info h3{
-  font:30px 'Seaweed Script', helvetica;
+  font:30px 'Seaweed Script', serif;
   color:white;
 }
 
@@ -106,6 +106,46 @@ main{
   height:200px;
   margin:50px 20px 20px 20px;
   padding:10px;
+}
+
+.hours div{
+  display:inline-block;
+  position:relative;
+  float:left;
+  border-right:3px solid white;
+  width:297px;
+  height:200px;
+}
+
+.hours h4{
+  font: 30px 'Seaweed Script', serif;
+  color:white;
+  text-align:center;
+}
+
+.hours p{
+  font:20px 'Open Sans', sans-serif;
+  color:white;
+  text-align:center;
+  margin-top:20px;
+}
+
+
+.hours ul{
+  display:inline-block;
+  position:relative;
+  float:left;
+  width:300px;
+  height:200px;
+  list-style:none;
+  margin-top:5px;
+}
+
+.hours li{
+  font:30px 'Seaweed Script', serif;
+  color:white;
+  text-align:center;
+  line-height:35px;
 }
 
 .community{
