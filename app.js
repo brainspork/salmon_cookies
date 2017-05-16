@@ -18,9 +18,6 @@ var seaTac = {
   closeHour: 20,
   aveCookie: 1.2,
   cookieArr:[],
-  //cookiesPerHour: function(this.minCustomers, this.maxCustomers, this.aveCookie){
-    //Math.floor((Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers)) + this.minCustomers)*this.aveCookie);
-  //}
 }
 
 var seaCenter= {
@@ -31,9 +28,6 @@ var seaCenter= {
   closeHour: 20,
   aveCookie: 3.7,
   cookieArr:[],
-  //cookiesPerHour: function(this.minCustomers, this.maxCustomers, this.aveCookie){
-  //  Math.floor((Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers)) + this.minCustomers)*this.aveCookie);
-  //}
 }
 
 var capHill = {
@@ -44,9 +38,6 @@ var capHill = {
   closeHour: 20,
   aveCookie: 2.3,
   cookieArr:[],
-  //cookiesPerHour: function(this.minCustomers, this.maxCustomers, this.aveCookie){
-    //Math.floor((Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers)) + this.minCustomers)*this.aveCookie);
-  //}
 }
 
 var alki = {
@@ -57,9 +48,6 @@ var alki = {
   closeHour: 20,
   aveCookie: 4.6,
   cookieArr:[],
-  //cookiesPerHour: function(this.minCustomers, this.maxCustomers, this.aveCookie){
-  //  Math.floor((Math.ceil(Math.random() * (this.maxCustomers - this.minCustomers)) + this.minCustomers)*this.aveCookie);
-//  }
 }
 
 function calculate(store){
