@@ -12,7 +12,7 @@ function Retailer(name, minCustomers, maxCustomers, openHour, closeHour, aveCook
   this.cookiesTotal = 0;
   this.cookiesPerHour = function(){
     return Math.floor((Math.ceil((Math.random() * (this.maxCustomers - this.minCustomers))) + this.minCustomers)*this.aveCookie);
-  }
+  };
 }
 
 
@@ -28,11 +28,11 @@ Retailer.prototype.calculate = function(){
     timeArr.push(hour);
     this.cookiesTotal += sales;
   }
-}
+};
 
 Retailer.prototype.render = function(){
   var tableSales = document.getElementById('locations');
-  var tableData = [this.name,];
+  var tableData = ['<td>' + this.name + '</td>',];
   for(var j = 0; j < this.cookieArr.length + 1; j++){
     if([j] < this.cookieArr.length){
       tableData.push('<td>' + this.cookieArr[j] + '</td>');
@@ -54,10 +54,8 @@ Retailer.prototype.render = function(){
   var newSales = document.createElement('tr');
   newSales.innerHTML = tableData.join('');
   tableSales.appendChild(newSales);
-  console.log(tableSales);
   timeSales.innerHTML = timeData.join('');
-  console.log(timeSales);
-}
+};
 
 var firstPike = new Retailer('1st and Pike', 23, 65, 6, 20, 6.3);
 var seaTac = new Retailer('SeaTac Airport', 3, 24, 6, 20, 1.2);
