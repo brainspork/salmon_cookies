@@ -50,7 +50,7 @@ var firstPike = new Retailer('1st and Pike', 23, 65, 6, 20, 6.3);
 var seaTac = new Retailer('SeaTac Airport', 3, 24, 6, 20, 1.2);
 var seaCenter = new Retailer('Seattle Center', 11, 38, 6, 20, 3.7);
 var capHill = new Retailer('Capitol Hill', 20, 38, 6, 20, 2.3);
-var alki = new Retailer('Alik', 2, 16, 6, 20, 4.6);
+var alki = new Retailer('Alki', 2, 16, 6, 20, 4.6);
 
 var locations = [firstPike, seaTac, seaCenter, capHill, alki];
 
