@@ -41,20 +41,10 @@ Retailer.prototype.render = function(){
     }
   }
 
-  var timeSales = document.getElementById('time');
-  var timeData = ['<td></td>',];
-  for(var k = 0; k < this.hoursArr.length + 1; k++){
-    if ([k] < this.hoursArr.length){
-      timeData.push('<td>' + this.hoursArr[k] + ':00</td>');
-    }else{
-      timeData.push('<td>Location Totals</td>');
-    }
-  }
-
+  console.log(tableData);
   var newSales = document.createElement('tr');
   newSales.innerHTML = tableData.join('');
   tableSales.appendChild(newSales);
-  timeSales.innerHTML = timeData.join('');
 };
 
 var firstPike = new Retailer('1st and Pike', 23, 65, 6, 20, 6.3);
@@ -65,11 +55,24 @@ var alki = new Retailer('Alik', 2, 16, 6, 20, 4.6);
 
 var locations = [firstPike, seaTac, seaCenter, capHill, alki];
 
-function footer(){
-  for(var p = 0; p < locations.length; p++){
-    locations[p].calculate();
-    locations[p].render();
+for(var p = 0; p < locations.length; p++){
+  locations[p].calculate();
+  locations[p].render();
+}
+function header(store){
+  var timeSales = document.getElementById('time');
+  var timeData = ['<td></td>',];
+  for(var k = 0; k < store.hoursArr.length + 1; k++){
+    if ([k] < store.hoursArr.length){
+      timeData.push('<td>' + store.hoursArr[k] + ':00</td>');
+    }else{
+      timeData.push('<td>Location Totals</td>');
+    }
   }
+  timeSales.innerHTML = timeData.join('');
+}
+function footer(){
+
 
   var locationsHourly = [];
   var hourlyTotals = [];
@@ -103,4 +106,5 @@ function footer(){
   hourlySales.appendChild(newHourly);
 }
 
+header(firstPike);
 footer();
