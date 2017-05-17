@@ -15,7 +15,6 @@ function Retailer(name, minCustomers, maxCustomers, openHour, closeHour, aveCook
   };
 }
 
-
 Retailer.prototype.calculate = function(){
   var tableArr = this.cookieArr;
   var timeArr = this.hoursArr;
