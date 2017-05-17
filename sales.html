@@ -5,42 +5,47 @@
       <title>Sales</title>
     </head>
     <body>
-      <fieldset>
-        <lable for="store_name">Store Name:</lable>
-        <input type="text" name="store_name" placeholder="Enter Store Name" required>
-      </fieldset>
-      <fieldset>
-        <lable for="min_ustomers">Minimum Hourly Customers</lable>
-        <input type="number" name="min_Customers" min="0" placeholder="Min" required>
-      </fieldset>
-      <fieldset>
-        <lable for="max_customers">Maximum Hourly Customers</lable>
-        <input type="number" name="max_customers" min="0" placeholder="Max" required>
-      </fieldset>
-      <fieldset>
-        <lable for="open_hour">Opening Hour (0-23):</lable>
-        <input type="number" name="open_hour" min="0" max="23" placeholder="Open" required>
-      </fieldset>
-      <fieldset>
-        <lable for="close_hour">Closing Hour (0-23):</lable>
-        <input type="number" name="close_hour" min="0" max="23" placeholder="Close" required>
-      </fieldset>
-      <fieldset>
-        <lable for="ave_cookie">Average Cookie Sales per person:</lable>
-        <input type="number" name="ave_cookie" min="0" placeholder="Average" required>
-      </fieldset>
-      <button id="submit_btn" type="submit">Add Store</button>
+      <form id="retailer_form">
+        <fieldset>
+          <lable for="name">Store Name:</lable>
+          <input type="text" name="name" placeholder="Enter Store Name" required>
+        </fieldset>
+        <fieldset>
+          <lable for="minCustomers">Minimum Hourly Customers</lable>
+          <input type="text" name="minCustomers"  placeholder="Min" required>
+        </fieldset>
+        <fieldset>
+          <lable for="maxCustomers">Maximum Hourly Customers</lable>
+          <input type="text" name="maxCustomers"  placeholder="Max" required>
+        </fieldset>
+        <fieldset>
+          <lable for="closeHour">Closing Hour (0-23):</lable>
+          <input type="text" name="closeHour" placeholder="Close" required>
+        </fieldset>
+        <fieldset>
+          <lable for="openHour">Opening Hour (0-23):</lable>
+          <input type="text" name="openHour"  placeholder="Open" required>
+        </fieldset>
+        <fieldset>
+          <lable for="aveCookie">Average Cookie Sales per person:</lable>
+          <input type="text" name="aveCookie" placeholder="Average" required>
+        </fieldset>
+        <button id="submit_btn" type="submit">Add Store</button>
+      </form>
       <section id="retailer">
-        <thead>
-          <td>Retailer</td>
-          <td>Minimum Customers</td>
-          <td>Maximum Customers</td>
-          <td>Open</td>
-          <td>Close</td>
-        </thead>
-        <tbody id="retailer_table">
-          <!-- Retailer data goes here -->
-        </tbody>
+        <table>
+          <thead>
+            <td>Retailer</td>
+            <td>Minimum Customers</td>
+            <td>Maximum Customers</td>
+            <td>Open</td>
+            <td>Close</td>
+            <td>Average Cookies</td>
+          </thead>
+          <tbody id="retailer_table">
+            <!-- Retailer data goes here -->
+          </tbody>
+        </table
       </section>
       <table>
         <thead id="time">
