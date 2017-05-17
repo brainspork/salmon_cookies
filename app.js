@@ -11,7 +11,7 @@ function Retailer(name, minCustomers, maxCustomers, openHour, closeHour, aveCook
   this.hoursArr = [];
   this.cookiesTotal = 0;
   this.cookiesPerHour = function(){
-    return Math.floor((Math.ceil((Math.random() * (this.maxCustomers - this.minCustomers))) + this.minCustomers)*this.aveCookie);
+    return Math.floor((Math.ceil((Math.random() * (this.maxCustomers - this.minCustomers + 1))) + this.minCustomers)*this.aveCookie);
   };
 }
 
