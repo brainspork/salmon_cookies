@@ -1,12 +1,12 @@
 'use strict';
 
-function Retailer(name, minCustomers, maxCustomers, openHour, closeHour, aveCookie){
+function Retailer(name, minCustomers, maxCustomers, aveCookie){
   this.name = name;
   this.minCustomers =minCustomers;
   this.maxCustomers = maxCustomers;
-  this.openHour = openHour;
-  this.closeHour = closeHour;
   this.aveCookie = aveCookie;
+  this.openHour = 6;
+  this.closeHour = 20;
   this.cookieArr = [];
   this.hoursArr = [];
   this.cookiesTotal = 0;
@@ -46,10 +46,10 @@ Retailer.prototype.render = function(){
   tableSales.appendChild(newSales);
 };
 
-var firstPike = new Retailer('1st and Pike', 23, 65, 6, 20, 6.3);
-var seaTac = new Retailer('SeaTac Airport', 3, 24, 6, 20, 1.2);
-var seaCenter = new Retailer('Seattle Center', 11, 38, 6, 20, 3.7);
-var capHill = new Retailer('Capitol Hill', 20, 38, 6, 20, 2.3);
+var firstPike = new Retailer('1st and Pike', 23, 65, 6.3);
+var seaTac = new Retailer('SeaTac Airport', 3, 24, 1.2);
+var seaCenter = new Retailer('Seattle Center', 11, 38, 3.7);
+var capHill = new Retailer('Capitol Hill', 20, 38, 2.3);
 var alki = new Retailer('Alki', 2, 16, 6, 20, 4.6);
 
 var locations = [firstPike, seaTac, seaCenter, capHill, alki,];
@@ -116,12 +116,10 @@ function formData(event) {
   var name = event.target.name.value;
   var minCustomers = event.target.minCustomers.value;
   var maxCustomers = event.target.maxCustomers.value;
-  var closeHour = event.target.closeHour.value;
-  var openHour = event.target.openHour.value;
   var aveCookie = event.target.aveCookie.value;
 
-  data.push(new Retailer(name, minCustomers, maxCustomers, openHour, closeHour, aveCookie));
-  locations.push(new Retailer(name, minCustomers, maxCustomers, closeHour, openHour, aveCookie));
+  data.push(new Retailer(name, minCustomers, maxCustomers,  aveCookie));
+  locations.push(new Retailer(name, minCustomers, maxCustomers, aveCookie));
   createTable();
   clearTable();
   printSales();
@@ -136,8 +134,6 @@ function createTable() {
     row.innerHTML = '<td>' + data[i].name + '</td>' +
       '<td>' + data[i].minCustomers + '</td>' +
       '<td>' + data[i].maxCustomers + '</td>' +
-      '<td>' + data[i].closeHour + '</td>' +
-      '<td>' + data[i].openHour + '</td>' +
       '<td>' + data[i].aveCookie + '</td>';
   }
 
