@@ -14,7 +14,7 @@ function Retailer(name, minCustomers, maxCustomers, openHour, closeHour, aveCook
     return Math.floor((Math.ceil((Math.random() * (this.maxCustomers - this.minCustomers + 1))) + this.minCustomers)*this.aveCookie);
   };
 }
-
+//calculates raw hourlysales and hours of operation to cookie arr
 Retailer.prototype.calculate = function(){
   var tableArr = this.cookieArr;
   var timeArr = this.hoursArr;
@@ -28,7 +28,7 @@ Retailer.prototype.calculate = function(){
     this.cookiesTotal += sales;
   }
 };
-
+//stores hourly sales data in cookieArr
 Retailer.prototype.render = function(){
   var tableSales = document.getElementById('locations');
   var tableData = ['<td>' + this.name + '</td>',];
@@ -52,12 +52,15 @@ var seaCenter = new Retailer('Seattle Center', 11, 38, 6, 20, 3.7);
 var capHill = new Retailer('Capitol Hill', 20, 38, 6, 20, 2.3);
 var alki = new Retailer('Alki', 2, 16, 6, 20, 4.6);
 
-var locations = [firstPike, seaTac, seaCenter, capHill, alki];
-
-for(var p = 0; p < locations.length; p++){
-  locations[p].calculate();
-  locations[p].render();
+var locations = [firstPike, seaTac, seaCenter, capHill, alki,];
+//returns Hourly sales table
+function printSales(){
+  for(var p = 0; p < locations.length; p++){
+    locations[p].calculate();
+    locations[p].render();
+  }
 }
+//returns times
 function header(store){
   var timeSales = document.getElementById('time');
   var timeData = ['<td></td>',];
@@ -70,14 +73,13 @@ function header(store){
   }
   timeSales.innerHTML = timeData.join('');
 }
+//returns hourly totals
 function footer(){
-
-
   var locationsHourly = [];
   var hourlyTotals = [];
   var total = 0;
 
-  for(p = 0; p < locations.length; p++){
+  for(var p = 0; p < locations.length; p++){
     locationsHourly.push(locations[p].cookieArr);
     total += locations[p].cookiesTotal;
   }
@@ -105,5 +107,53 @@ function footer(){
   hourlySales.appendChild(newHourly);
 }
 
+var form = document.getElementById('retailer_form');
+var table = document.getElementById('retailer_table');
+var data = [];
+function formData(event) {
+  event.preventDefault();
+
+  var name = event.target.name.value;
+  var minCustomers = event.target.minCustomers.value;
+  var maxCustomers = event.target.maxCustomers.value;
+  var closeHour = event.target.closeHour.value;
+  var openHour = event.target.openHour.value;
+  var aveCookie = event.target.aveCookie.value;
+
+  data.push(new Retailer(name, minCustomers, maxCustomers, openHour, closeHour, aveCookie));
+  locations.push(new Retailer(name, minCustomers, maxCustomers, closeHour, openHour, aveCookie));
+  createTable();
+  clearTable();
+  printSales();
+  footer();
+  form.reset();
+}
+//creates form data
+function createTable() {
+  var row;
+  for (var i = 0; i < data.length; i++) {
+    row = document.createElement('tr');
+    row.innerHTML = '<td>' + data[i].name + '</td>' +
+      '<td>' + data[i].minCustomers + '</td>' +
+      '<td>' + data[i].maxCustomers + '</td>' +
+      '<td>' + data[i].closeHour + '</td>' +
+      '<td>' + data[i].openHour + '</td>' +
+      '<td>' + data[i].aveCookie + '</td>';
+  }
+
+  table.appendChild(row);
+}
+console.log(locations);
+form.addEventListener('submit', formData);
+
+function clearTable(){
+  for(var i = 0; i < locations.length; i++){
+    locations[i].cookieArr = [];
+  }
+  var remove = document.getElementById('locations');
+  remove.innerHTML = '';
+}
+
+printSales();
 header(firstPike);
 footer();
