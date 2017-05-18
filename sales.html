@@ -1,10 +1,43 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <link href="reset.css" rel="stylesheet">
       <link href = "style.css" rel = "stylesheet">
       <title>Sales</title>
     </head>
     <body>
+      <form id="retailer_form">
+        <fieldset>
+          <lable for="name">Store Name:</lable>
+          <input type="text" name="name" placeholder="Enter Store Name" required>
+        </fieldset>
+        <fieldset>
+          <lable for="minCustomers">Minimum Hourly Customers</lable>
+          <input type="text" name="minCustomers"  placeholder="Min" required>
+        </fieldset>
+        <fieldset>
+          <lable for="maxCustomers">Maximum Hourly Customers</lable>
+          <input type="text" name="maxCustomers"  placeholder="Max" required>
+        </fieldset>
+        <fieldset>
+          <lable for="aveCookie">Average Cookie Sales per person:</lable>
+          <input type="text" name="aveCookie" placeholder="Average" required>
+        </fieldset>
+        <button id="submit_btn" type="submit">Add Store</button>
+      </form>
+      <section id="retailer">
+        <table>
+          <thead>
+            <td>Retailer</td>
+            <td>Minimum Customers</td>
+            <td>Maximum Customers</td>
+            <td>Average Cookies</td>
+          </thead>
+          <tbody id="retailer_table">
+            <!-- Retailer data goes here -->
+          </tbody>
+        </table
+      </section>
       <table>
         <thead id="time">
         </thead>
