@@ -11,7 +11,7 @@ function Retailer(name, minCustomers, maxCustomers, aveCookie){
   this.hoursArr = [];
   this.cookiesTotal = 0;
   this.cookiesPerHour = function(){
-    return Math.floor((Math.floor((Math.random() * ((this.maxCustomers - this.minCustomers) + 1))) + this.minCustomers)*this.aveCookie);
+    return Math.floor((Math.floor((Math.random() * (this.maxCustomers - this.minCustomers + 1))) + this.minCustomers)*this.aveCookie);
   };
 }
 //calculates raw hourlysales and hours of operation to cookie arr
@@ -108,8 +108,6 @@ function footer(){
 }
 
 var form = document.getElementById('retailer_form');
-var table = document.getElementById('retailer_table');
-var data = [];
 function formData(event) {
   event.preventDefault();
 
@@ -118,27 +116,13 @@ function formData(event) {
   var maxCustomers = event.target.maxCustomers.value;
   var aveCookie = event.target.aveCookie.value;
 
-  data.push(new Retailer(name, minCustomers, maxCustomers,  aveCookie));
   locations.push(new Retailer(name, minCustomers, maxCustomers, aveCookie));
-  createTable();
   clearTable();
   printSales();
   footer();
   form.reset();
 }
-//creates form data
-function createTable() {
-  var row;
-  for (var i = 0; i < data.length; i++) {
-    row = document.createElement('tr');
-    row.innerHTML = '<td>' + data[i].name + '</td>' +
-      '<td>' + data[i].minCustomers + '</td>' +
-      '<td>' + data[i].maxCustomers + '</td>' +
-      '<td>' + data[i].aveCookie + '</td>';
-  }
 
-  table.appendChild(row);
-}
 console.log(locations);
 form.addEventListener('submit', formData);
 
