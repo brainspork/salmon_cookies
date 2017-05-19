@@ -110,7 +110,7 @@ function footer(){
   newHourly.innerHTML = hourlyData.join('');
   hourlySales.appendChild(newHourly);
 }
-//Clears existing table upon submit
+
 function clearTable(){
   for(var i = 0; i < locations.length; i++){
     locations[i].cookieArr = [];
