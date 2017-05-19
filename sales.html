@@ -5,29 +5,68 @@
       <link href = "style.css" rel = "stylesheet">
       <title>Sales</title>
     </head>
-    <body>
+    <body id="sales_body">
       <form id="retailer_form">
         <fieldset>
           <lable for="name">Store Name:</lable>
           <input type="text" name="name" placeholder="Enter Store Name" required>
         </fieldset>
+
         <fieldset>
-          <lable for="minCustomers">Minimum Hourly Customers</lable>
+          <lable for="minCustomers">Minimum Hourly Customers:</lable>
           <input type="text" name="minCustomers"  placeholder="Min" required>
         </fieldset>
+
         <fieldset>
-          <lable for="maxCustomers">Maximum Hourly Customers</lable>
+          <lable for="maxCustomers">Maximum Hourly Customers:</lable>
           <input type="text" name="maxCustomers"  placeholder="Max" required>
         </fieldset>
+
+        <fieldset>
+          <lable for="openHour">Open Time (0-23:)</lable>
+          <input type="text" name="openHour"  placeholder="Open" required>
+        </fieldset>
+
+        <fieldset>
+          <lable for="closeHour">Close Time (0-23):</lable>
+          <input type="text" name="closeHour"  placeholder="Close" required>
+        </fieldset>
+
         <fieldset>
           <lable for="aveCookie">Average Cookie Sales per person:</lable>
           <input type="text" name="aveCookie" placeholder="Average" required>
         </fieldset>
+
         <button id="submit_btn" type="submit">Add Store</button>
       </form>
-      </section>
       <table>
         <thead id="time">
+          <td>Location Name</td>
+          <td>0:00</td>
+          <td>1:00</td>
+          <td>2:00</td>
+          <td>3:00</td>
+          <td>4:00</td>
+          <td>5:00</td>
+          <td>6:00</td>
+          <td>7:00</td>
+          <td>8:00</td>
+          <td>9:00</td>
+          <td>10:00</td>
+          <td>11:00</td>
+          <td>12:00</td>
+          <td>13:00</td>
+          <td>14:00</td>
+          <td>15:00</td>
+          <td>16:00</td>
+          <td>17:00</td>
+          <td>18:00</td>
+          <td>19:00</td>
+          <td>20:00</td>
+          <td>21:00</td>
+          <td>22:00</td>
+          <td>23:00</td>
+          <td>Location Totals</td>
         </thead>
         <tbody id="locations">
         </tbody>
