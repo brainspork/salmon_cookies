@@ -1,16 +1,18 @@
 body{
-  background:url(https://cdn.pixabay.com/photo/2016/11/29/05/04/blur-1867447_960_720.jpg);
+  background:url(https://cdn-images-1.medium.com/max/1920/1*YzY1FMA0rW1WRMI4hWm-gw.jpeg);
   background-size:cover;
+  background-position:top;
+  background-repeat:no-repeat;
   width:1349px;
   margin: 0 auto;
 }
 
 header{
-  position: fixed;
+  position:fixed;
   top:0;
   width:100%;
   color:white;
-  z-index: 99999999;
+  z-index:99999999;
 }
 
 header div{
@@ -22,17 +24,17 @@ header div img{
   position:absolute;
   float:left;
   width:150px;
+  left:10px;
 }
 
 header h1{
   position:absolute;
-  top:40px;
-  left:15px;
-  font:20px 'Seaweed Script', serif;
+  top:30px;
+  font:30px 'Seaweed Script', serif;
 }
 
 header nav{
-  width:1349;
+  width:1349px;
   height:70px;
   background-color:#307F56;
   text-align:center;
@@ -285,6 +287,15 @@ footer li:hover{
 #sales_body{
   font:20px 'Opan sans', sans-serif;
   color:white;
+}
+
+form{
+  width:550px;
+  height:350px;
+  background:#307F56;
+  display:inline-block;
+  margin:20px 0;
+  border-radius:3px;
 }
 
 fieldset{
