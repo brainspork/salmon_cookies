@@ -1,64 +1,55 @@
-
-#index{
-  background:url(https://wallpaperscraft.com/image/city_cafe_chair_table_blur_bokeh_59087_2560x1024.jpg);
+body{
+  background:url(https://cdn.pixabay.com/photo/2016/11/29/05/04/blur-1867447_960_720.jpg);
   background-size:cover;
-  background-position:right;
   width:1349px;
+  margin: 0 auto;
 }
 
 header{
-  height:400px;
-  background-image:url(https://c1.staticflickr.com/8/7104/7300658950_7059efe8ef_b.jpg);
-  background-repeat:no-repeat;
-  background-size:cover;
-  margin: 0 auto;
+  position: fixed;
+  top:0;
+  width:100%;
+  color:white;
+  z-index: 99999999;
 }
 
 header div{
   position:relative;
-}
-
-header h1, header h2{
-  display:inline-block;
-  position:absolute;
-  top:200px;
-  width:100%;
-  background:rgba(0,0,0,0.3);
-  text-align:center;
-  font:110px 'Seaweed Script', serif;
-  color:white;
-  margin:auto;
-}
-
-header h2{
-  position:relative;
-  background:none;
-  top:300px;
-  font:40px 'Seaweed Script', serif;
+  margin-left:20px;
 }
 
 header div img{
   position:absolute;
-  top:20px;
-  left:calc(50% - 470px);
-  width:960px;
+  float:left;
+  width:150px;
+}
+
+header h1{
+  position:absolute;
+  top:40px;
+  left:15px;
+  font:20px 'Seaweed Script', serif;
 }
 
 header nav{
-  width:100%;
-  height:60px;
-  background-color:#1937FF;
+  width:1349;
+  height:70px;
+  background-color:#307F56;
   text-align:center;
-  margin-top:310px;
+}
+
+header nav ul{
+  width:960px;
+  margin:0 auto;
 }
 
 header nav li{
   display:inline-block;
-  background:#26C7FF;
-  border-radius:5px;
+  background:#18402B;
+  border-radius:3px;
   font:35px 'Seaweed Script', serif;
   color:white;
-  margin:5px 10px;
+  margin:10px 10px;
   padding:0px 50px;
 }
 
@@ -68,26 +59,26 @@ header nav li a{
 }
 
 header nav li a:hover{
-  color:#FF3F6F;
+  color:#5FFFAD;
 }
 
-#fatty{
-  padding:0 35px;
+.clear{
+  clear:both;
 }
 
 main{
-  clear:both;
-  width: 1349px;
+  margin-top:30px;
+  margin:40px auto;
 }
 
 .buissness-info{
   display:inline-block;
   float:left;
-  background:rgba(255, 63, 111,.7);
-  border-radius:5px;
+  background:rgba(48, 127, 86,.7);
+  border-radius:3px;
   width:600px;
   height:560px;
-  margin:50px 20px 20px 20px;
+  margin:50px 20px 20px 40px;
   padding:10px;
 }
 
@@ -98,7 +89,7 @@ main{
 
 .buissness-info p{
   background:rgba(0,0,0,0.3);
-  border-radius:5px;
+  border-radius:3px;
   text-align:center;
   font:25px 'Open Sans', sans-serif;
   font-weight:bold;
@@ -111,11 +102,11 @@ main{
 .hours{
   display:inline-block;
   float:left;
-  background:rgba(255, 63, 111,.7);
-  border-radius:5px;
+  background:rgba(48, 127, 86,.7);
+  border-radius:3px;
   width:600px;
   height:200px;
-  margin:50px 20px 20px 20px;
+  margin:50px 30px 20px 10px;
   padding:10px;
 }
 
@@ -138,9 +129,8 @@ main{
   font:20px 'Open Sans', sans-serif;
   color:white;
   text-align:center;
-  margin-top:20px;
+  margin-top:5px;
 }
-
 
 .hours ul{
   display:inline-block;
@@ -160,11 +150,11 @@ main{
 .community{
   display:inline-block;
   float:left;
-  background:rgba(255, 63, 111,.7);
-  border-radius:5px;
+  background:rgba(48, 127, 86,.7);
+  border-radius:3px;
   width:600px;
   height:300px;
-  margin:20px;
+  margin:20px 30px 20px 10px;
   padding:10px;
 }
 
@@ -177,7 +167,7 @@ main{
 article{
   display:inline-block;
   border:3px solid white;
-  border-radius:5px;
+  border-radius:3px;
   float:left;
   background:rgba(0, 0, 0, 0.3);
   width:294px;
@@ -204,64 +194,90 @@ article p{
 }
 
 .community a:hover{
-  color:#CCBA14;
+  color:#5FFFAD;
 }
 
 #art-two img{
-  border-radius:5px;
+  border-radius:3px;
   width:110px;
   height:auto;
   margin-left:95px;
 }
 
 #art-one img{
-  border-radius:5px;
+  border-radius:3px;
   width:180px;
   height:auto;
   margin-left:63px;
 }
 
-fieldset{
-  padding:20px;
+#sticker{
+  background:url(https://raw.githubusercontent.com/codefellows/seattle-201d22/master/09-js_debugging_dev_tools_animations/lab/assets/chinook.jpg);
+  background-position:left;
+  background-size:cover;
 }
 
-input[type="text"]{
-  padding:7px;
-  margin-left:7px;
-  border:solid 1px black;
+#cutter{
+  background:url(https://raw.githubusercontent.com/codefellows/seattle-201d22/master/09-js_debugging_dev_tools_animations/lab/assets/cutter.jpeg);
+  background-position:center;
+  background-size:cover;
+}
+
+#cookie{
+  background:url(https://raw.githubusercontent.com/codefellows/seattle-201d22/master/09-js_debugging_dev_tools_animations/lab/assets/frosted-cookie.jpg);
+  background-position:left;
+  background-size:cover;
+}
+
+#shirt{
+  background:url(https://raw.githubusercontent.com/codefellows/seattle-201d22/master/09-js_debugging_dev_tools_animations/lab/assets/shirt.jpg);
+  background-position:center;
+  background-size:cover;
+}
+
+footer h2{
+  text-align:center;
+  font:30px 'Seaweed Script', serif;
+}
+
+footer{
+  display:inline-block;
+  width:1349px;
+  background:#307F56;
+  color:white;
+  padding-bottom:50px;
+}
+
+footer ul{
+  width:960px;
+  margin:20px 240px 100px 240px;
+}
+
+footer li{
+  display:inline-block;
+  position:relative;
+  width:200px;
+  height:200px;
+  border-radius:100%;
+  margin:10px;
+  transition:350ms all;
+  float:left;
+}
+
+footer span{
+  display:inline-block;
+  position:absolute;
+  bottom:45%;
   border-radius:3px;
+  font:20px 'Open Sans',sans-serif;
+  text-align:center;
+  background:rgba(0,0,0,0.3);
+  width:100%;
 }
 
-input[type="text"]:focus{
-  background:#000;
-  color:#fff;
-}
-
-button{
-  border:none;
-  padding:8px 18px;
-  margin-left:20px;
-  margin-bottom:20px;
-  background:#000;
-  color:#fff;
-  border-radius:3px;
-  cursor:pointer;
-  font-size:20px;
-}
-
-button:active{
-  background:#333;
-}
-
-table{
-  margin-left:20px;
-}
-
-thead{
-  background:#888;
-}
-
-td{
-  padding:20px;
-  border:solid 1px #000;
+footer li:hover{
+  width:250px;
+  height:250px;
+  margin:-15px;
+  z-index:99999;
 }
