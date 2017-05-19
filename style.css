@@ -281,3 +281,59 @@ footer li:hover{
   margin:-15px;
   z-index:99999;
 }
+
+#sales_body{
+  font:20px 'Opan sans', sans-serif;
+  color:white;
+}
+
+fieldset{
+  padding:10px;
+}
+
+input[type="text"]{
+  padding:7px;
+  margin-left:7px;
+  border:solid 1px black;
+  border-radius:3px;
+}
+
+input[type="text"]:focus{
+  background:#000;
+  color:#fff;
+}
+
+button{
+  border:none;
+  padding:8px 18px;
+  margin-left:20px;
+  margin-bottom:20px;
+  background:#18402B;
+  color:#fff;
+  border-radius:3px;
+  cursor:pointer;
+  font-size:20px;
+}
+
+button:active{
+  background:#333;
+}
+
+table{
+  display:inline-block;
+  margin-left:20px;
+  width:1300px;
+  height:100%;
+  overflow:scroll;
+}
+
+td{
+  background:rgba(48, 127, 86,.7);
+  padding:10px;
+  border:solid 1px #000;
+}
+
+
+thead{
+  background:#18402B;
+}
