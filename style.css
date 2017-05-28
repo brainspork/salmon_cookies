@@ -1,7 +1,7 @@
 body{
   background:url(https://cdn-images-1.medium.com/max/1920/1*YzY1FMA0rW1WRMI4hWm-gw.jpeg);
   background-size:cover;
-  background-position:top;
+  background-attachment: scroll;
   background-repeat:no-repeat;
   width:1349px;
   margin: 0 auto;
@@ -69,6 +69,10 @@ header nav li a:hover{
 }
 
 main{
+  background:url(https://cdn-images-1.medium.com/max/1920/1*YzY1FMA0rW1WRMI4hWm-gw.jpeg);
+  background-size:cover;
+  background-attachment: scroll;
+  background-repeat:no-repeat;
   margin-top:30px;
   margin:40px auto;
 }
